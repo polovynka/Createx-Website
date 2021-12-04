@@ -1,0 +1,82 @@
+.header {
+	padding: 21px 0;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.nav {
+		display: flex;
+		align-items: center;
+	}
+
+	&__nav{
+		margin-left: -106px;
+	}
+
+	&--main {
+		background-color: $light-color;
+	}
+}
+
+.nav {
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+
+	&__list-item {
+		&:not(:last-child) {
+			margin-right: 40px;
+		}
+	}
+
+	&__link {
+		font-weight: $fw-bolt;
+		font-size: 16px;
+		color: $grey-color;
+	}
+}
+
+.header-contacts {
+	display: flex;
+	align-items: center;
+
+	&__link {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		&:not(:last-child) {
+			margin-right: 40px;
+		}
+	}
+}
+.contacts-link {
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+	padding-left: 53px;
+
+	&__caption {
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 21px;
+		color: $grey-color;
+	}
+
+	&__value {
+		font-size: 18px;
+		line-height: 27px;
+		color: $ebony-color;
+	}
+
+	&--call {
+		background-image: url(../images/iPhone.svg);
+	}
+
+	&--mail {
+		background-image: url(../images/mail.svg);
+	}
+}

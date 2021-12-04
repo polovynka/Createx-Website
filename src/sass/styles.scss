@@ -1,0 +1,27 @@
+// ----- Imports ------
+@import "mixins/font-include";
+@import "mixins/mini";
+@import "normalize";
+@import "variables";
+@import"global-settings";
+@import "fonts";
+
+
+// ----- add components ------
+@import "components/repeated-components/form-field";
+@import "components/repeated-components/slider-nav";
+
+@import "swiper";
+
+@import "components/header";
+@import "components/hero";
+@import "components/about-section";
+@import "components/mission";
+@import "components/services-section";
+@import "components/portfolio-section";
+
+
+
+
+// ----- Global ------
+

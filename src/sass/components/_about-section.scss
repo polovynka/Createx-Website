@@ -1,0 +1,67 @@
+.about-section {
+	padding-bottom: 60px;
+	background-color: $light-color;
+}
+
+.video-block {
+	position: relative;
+	overflow: hidden;
+	border-radius: 4px;
+	height: 500px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		z-index: 3;
+		background: #1e212c;
+		opacity: 0.6;
+	}
+
+	&__content {
+		display: block;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__play {
+		@include flex-center;
+
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		background-color: $primary-color;
+		border-radius: 100%;
+		width: 80px;
+		height: 80px;
+		transform: translate(-50%, -50%);
+		z-index: 10;
+
+		svg {
+			height: 26px;
+			width: 26px;
+		}
+	}
+
+	&__muted {
+		@include flex-center;
+
+		position: absolute;
+		left: 32px;
+		bottom: 32px;
+		background-color: rgba(#fff, 0.12);
+		border-radius: 100%;
+		width: 40px;
+		height: 40px;
+		z-index: 10;
+
+		svg {
+			height: 13px;
+			width: 13px;
+		}
+	}
+}
