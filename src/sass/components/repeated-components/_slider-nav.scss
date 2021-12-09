@@ -1,4 +1,6 @@
 .slider-nav {
+	position: relative;
+	z-index: 15;
 	display: flex;
 	align-items: center;
 

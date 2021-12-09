@@ -6,19 +6,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 
-	&__learn {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	&__subtitle {
-		font-weight: 700;
-		font-size: 28px;
-		line-height: 150%;
-		color: $ebony-color;
-		margin-right: 40px;
-	}
+	
 
 	&__list{
 		margin-bottom: 77px;

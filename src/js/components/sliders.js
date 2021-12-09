@@ -1,7 +1,8 @@
-const swiper = new Swiper('.swiper', {
+const portfolioSlider = new Swiper('.portfolio-section__items', {
 	// Optional parameters
 	slidesPerView: 3,
 	spaceBetween: 30,
+	watchSlidesProgress: true,
 
 	loop: true,
 	navigation: {
