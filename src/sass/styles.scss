@@ -3,13 +3,21 @@
 @import "mixins/mini";
 @import "normalize";
 @import "variables";
-@import"global-settings";
+@import "global-settings";
 @import "fonts";
 
-
-// ----- add components ------
-
 @import "swiper";
+
+// ----- components ------
+
+// ----- repeated components ------
+
+@import "components/repeated-components/form-field";
+@import "components/repeated-components/slider-nav";
+@import "components/repeated-components/learn-more";
+@import "components/repeated-components/partners";
+
+// ----- main components ------
 
 @import "components/header";
 @import "components/hero";
@@ -17,15 +25,6 @@
 @import "components/mission";
 @import "components/services-section";
 @import "components/portfolio-section";
-
-// ----- repeated components ------
-
-@import "components/repeated-components/form-field";
-@import "components/repeated-components/slider-nav";
-@import "components/repeated-components/learn-more";
-
-
-
+@import "components/testimonials";
 
 // ----- Global ------
-

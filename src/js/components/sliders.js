@@ -11,3 +11,16 @@ const portfolioSlider = new Swiper('.portfolio-section__items', {
 	},
 
 });
+
+const testimonialsSlider = new Swiper('.testimonials__items', {
+	// Optional parameters
+	slidesPerView: 1,
+	watchSlidesProgress: true,
+
+	loop: true,
+	navigation: {
+		nextEl: '.testimonials__next',
+		prevEl: '.testimonials__prev',
+	},
+
+});
