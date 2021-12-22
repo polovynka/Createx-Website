@@ -38,6 +38,17 @@ body {
     max-width: 1260px;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
 .btn {
     cursor: pointer;
     border: none;
@@ -84,7 +95,7 @@ body {
     line-height: 130%;
     color: $ebony-color;
 
-    &--center{
+    &--center {
         text-align: center;
     }
 }
@@ -96,11 +107,11 @@ body {
     line-height: 150%;
     color: $storm-color;
 
-    &--center{
+    &--center {
         text-align: center;
     }
 }
 
-.section-offset{
+.section-offset {
     padding-top: 120px;
 }
