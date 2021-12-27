@@ -1,0 +1,172 @@
+.footer {
+	padding: 83px 0;
+	background: $ebony-color;
+	color: rgba($color: #ffffff, $alpha: 0.6);
+
+	&__container {
+		display: grid;
+		grid-template-columns: 474px 261px 495px;
+		grid-template-rows: auto;
+		grid-template-areas:
+			"about-Us . form"
+			"address nav-1 nav-2"
+			"copyright . .";
+	}
+
+	&__copyright {
+		grid-area: copyright;
+		font-size: 12px;
+		line-height: 150%;
+		color: $light-color;
+
+		span {
+			padding-left: 18px;
+			background-image: url(../images/with-love.svg);
+			background-position: left center;
+			background-size: 16px 16px;
+			background-repeat: no-repeat;
+		}
+	}
+}
+
+.footer-about-us {
+	grid-area: about-Us;
+
+	&__header {
+		display: flex;
+	}
+
+	&__descr {
+		margin-top: 20px;
+		font-size: 14px;
+		line-height: 150%;
+	}
+}
+
+.social {
+	display: flex;
+	margin-left: 60px;
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 16px;
+		}
+	}
+
+	&__link {
+		display: block;
+		width: 24px;
+		height: 24px;
+
+		svg {
+			display: block;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+}
+.footer-form {
+	grid-area: form;
+	margin-bottom: 55px;
+
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 150%;
+		color: $light-color;
+		margin-bottom: 20px;
+	}
+	&__form-field {
+		position: relative;
+		margin-bottom: 15px;
+		width: 490px;
+	}
+	&__input {
+		padding-left: 16px;
+		width: 100%;
+		height: 44px;
+		background: rgba(255, 255, 255, 0.12);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		border-radius: 4px;
+		font-size: 14px;
+		line-height: 150%;
+
+		&::placeholder {
+			color: rgba($color: #ffffff, $alpha: 0.6);
+		}
+	}
+
+	&__btn {
+		width: 131px;
+		height: 44px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 14px;
+		padding: 0 20px;
+		background: #ff5a30;
+		border-radius: 0px 4px 4px 0px;
+	}
+
+	&__descr {
+		font-size: 12px;
+		line-height: 150%;
+	}
+}
+
+.footer-address {
+	grid-area: address;
+	font-style: normal;
+	margin-bottom: 50px;
+
+	&__title {
+		font-size: 16px;
+		line-height: 150%;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: $light-color;
+		margin-bottom: 10px;
+	}
+
+	&__item {
+		display: block;
+		margin-bottom: 5px;
+		a {
+			color: rgba($color: #ffffff, $alpha: 0.6);
+		}
+	}
+	&__name {
+		font-size: 16px;
+		line-height: 160%;
+		color: $light-color;
+	}
+}
+.footer-nav-1 {
+	grid-area: nav-1;
+}
+.footer-nav {
+	&__title {
+		font-size: 16px;
+		line-height: 150%;
+		font-weight: 700;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: $light-color;
+		margin-bottom: 10px;
+	}
+
+	&__item {
+		margin-bottom: 5px;
+	}
+
+	&__link {
+		font-size: 16px;
+		line-height: 160%;
+		color: rgba($color: #ffffff, $alpha: 0.6);
+	}
+}
+.footer-nav-2 {
+	grid-area: nav-2;
+}
