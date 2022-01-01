@@ -10,14 +10,15 @@
 
 // ----- components ------
 
-// ----- repeated components ------
+// ----- recurring components ------
 @import "components/recurring-components/custom-checkbox";
 @import "components/recurring-components/form-field";
 @import "components/recurring-components/slider-nav";
 @import "components/recurring-components/learn-more";
-@import "components/recurring-components/partners";
+@import "components/recurring-components/breadcrumb";
+@import "components/recurring-components/btn";
 
-// ----- main components ------
+// ----- home page ------
 
 @import "components/header";
 @import "components/hero";
@@ -25,8 +26,13 @@
 @import "components/mission";
 @import "components/services-section";
 @import "components/portfolio-section";
+@import "components/partners";
 @import "components/testimonials";
 @import "components/facts";
 @import "components/recent-news";
 @import "components/contacts-section";
 @import "components/footer";
+
+// Services page
+@import "components/hero-services";
+@import "components/services-content";

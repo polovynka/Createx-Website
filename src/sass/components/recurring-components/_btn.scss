@@ -1,0 +1,30 @@
+.btn {
+	display: inline-block;
+	border-style: solid;
+	border-width: 1px;
+	border-color: transparent;
+	padding: 15px 39px;
+	font-size: 16px;
+	font-weight: $fw-bolt;
+	line-height: 20px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: $light-color;
+	border-radius: 4px;
+
+	&--stroke {
+		&-light {
+			color: $light-color;
+			border-color: $light-color;
+		}
+
+		&-primary {
+			border-color: $primary-color;
+			color: $primary-color;
+		}
+	}
+
+	&--fill {
+		background-color: $primary-color;
+	}
+}

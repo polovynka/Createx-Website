@@ -9,7 +9,7 @@
 	
 
 	&__list{
-		margin-bottom: 77px;
+		margin-bottom: 79px;
 	}
 }
 
@@ -73,7 +73,7 @@
 		&-icon {
 			width: 52px;
 			height: 52px;
-			margin-bottom: 15px;
+			margin-bottom: 22px;
 			object-fit: cover;
 			fill: $primary-color;
 			transition: fill 0.3s ease-in-out;
@@ -82,7 +82,7 @@
 		&-title {
 			font-size: 20px;
 			line-height: 150%;
-			font-weight: 700;
+			font-weight: $fw-bolt;
 			color: $ebony-color;
 			text-align: center;
 			transition: color 0.3s ease-in-out;

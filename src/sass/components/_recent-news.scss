@@ -1,5 +1,5 @@
 .recent-news {
-	padding: 178px 0;
+	padding: 181px 0;
 	padding-bottom: 120px;
 
 	&__title {
@@ -11,7 +11,7 @@
 		grid-template-columns: repeat(12, 1fr);
 		grid-template-rows: repeat(2, 255px);
 		gap: 30px;
-		margin-bottom: 75px;
+		margin-bottom: 82px;
 	}
 
 	&__list-item {
@@ -37,7 +37,7 @@
 			}
 
 			.recent-news__article-text {
-				padding: 14px 20px;
+				padding: 18px 24px;
 			}
 
 			.recent-news__article-title {
@@ -46,11 +46,9 @@
 		}
 	}
 
-	&__article-img {
-	}
 
 	&__article-text {
-		padding: 20px 27px;
+		padding: 26px 24px;
 	}
 
 	&__article-title {
@@ -58,7 +56,7 @@
 	}
 
 	&__article-link {
-		font-weight: 700;
+		font-weight: $fw-bolt;
 		font-size: 20px;
 		line-height: 150%;
 		color: $ebony-color;

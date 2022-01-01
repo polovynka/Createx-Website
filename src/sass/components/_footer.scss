@@ -1,5 +1,5 @@
 .footer {
-	padding: 83px 0;
+	padding: 82px 0;
 	background: $ebony-color;
 	color: rgba($color: #ffffff, $alpha: 0.6);
 
@@ -20,7 +20,8 @@
 		color: $light-color;
 
 		span {
-			padding-left: 18px;
+			padding-left: 20px;
+			margin-left: 3px;
 			background-image: url(../images/with-love.svg);
 			background-position: left center;
 			background-size: 16px 16px;
@@ -34,10 +35,10 @@
 
 	&__header {
 		display: flex;
+		margin-bottom: 24px;
 	}
 
 	&__descr {
-		margin-top: 20px;
 		font-size: 14px;
 		line-height: 150%;
 	}
@@ -68,19 +69,19 @@
 }
 .footer-form {
 	grid-area: form;
-	margin-bottom: 55px;
+	margin-bottom: 50px;
 
 	&__title {
-		font-weight: 700;
+		font-weight: $fw-bolt;
 		font-size: 24px;
 		line-height: 150%;
 		color: $light-color;
-		margin-bottom: 20px;
+		margin-bottom: 23px;
 	}
 	&__form-field {
 		position: relative;
 		margin-bottom: 15px;
-		width: 490px;
+		width: 495px;
 	}
 	&__input {
 		padding-left: 16px;
@@ -118,16 +119,16 @@
 .footer-address {
 	grid-area: address;
 	font-style: normal;
-	margin-bottom: 50px;
+	margin-bottom: 54px;
 
 	&__title {
 		font-size: 16px;
 		line-height: 150%;
 		letter-spacing: 1px;
 		text-transform: uppercase;
-		font-weight: 700;
+		font-weight: $fw-bolt;
 		color: $light-color;
-		margin-bottom: 10px;
+		margin-bottom: 14px;
 	}
 
 	&__item {
@@ -150,11 +151,11 @@
 	&__title {
 		font-size: 16px;
 		line-height: 150%;
-		font-weight: 700;
+		font-weight: $fw-bolt;
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		color: $light-color;
-		margin-bottom: 10px;
+		margin-bottom: 14px;
 	}
 
 	&__item {

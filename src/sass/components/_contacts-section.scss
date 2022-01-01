@@ -1,5 +1,5 @@
 .contacts-section {
-	padding: 75px 0;
+	padding: 78px 0;
 	background-image: url(../images/contacts-bg.jpg);
 	background-position: center;
 	background-size: cover;
@@ -27,7 +27,7 @@
 	&__title {
 		font-size: 28px;
 		line-height: 150%;
-		font-weight: 700;
+		font-weight: $fw-bolt;
 		color: $ebony-color;
 		margin-bottom: 25px;
 		text-align: center;
@@ -37,7 +37,7 @@
 		width: 415px;
 		height: 44px;
 		padding: 13px;
-		background: #f4f5f7;
+		background:$athens-color;
 		border: 1px solid #d7dadd;
 		border-radius: 4px;
 		margin-bottom: 20px;
@@ -63,7 +63,7 @@
 		border-radius: 4px;
 		font-size: 14px;
 		line-height: 44px;
-		font-weight: 700;
+		font-weight: $fw-bolt;
 		letter-spacing: 0.5px;
 		text-transform: uppercase;
 	}

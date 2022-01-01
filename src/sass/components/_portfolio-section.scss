@@ -1,9 +1,9 @@
 .portfolio-section {
 	background-color: $light-color;
-	padding: 118px 0;
+	padding: 120px 0;
 
 	&__top {
-		margin-bottom: 48px;
+		margin-bottom: 50px;
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
@@ -17,7 +17,7 @@
 
 	&__items {
 		margin: 0 -60px -140px;
-		padding: 0 60px 140px;
+		padding: 0 60px 145px;
 
 		.swiper-slide:not(.swiper-slide-visible) {
 			opacity: 0;

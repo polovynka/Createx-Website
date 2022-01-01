@@ -1,5 +1,5 @@
 .facts {
-	padding-top: 180px;
+	padding-top: 190px;
 	position: relative;
 	overflow: hidden;
 
@@ -19,7 +19,7 @@
 		display: flex;
 		justify-content: center;
 		gap: 48px;
-		margin-top: 55px;
+		margin-top: 58px;
 	}
 }
 
@@ -46,7 +46,7 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		font-weight: 700;
+		font-weight: $fw-bolt;
 		font-size: 32px;
 		line-height: 150%;
 		color: $ebony-color;
