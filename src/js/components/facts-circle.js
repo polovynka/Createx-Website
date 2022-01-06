@@ -15,20 +15,22 @@ function calcStrokeDashoffset() {
 };
 
 // Observer
+const circleList = document.querySelector('.facts__list');
 
-const observer = new IntersectionObserver(entries => {
+if (circleList) {
+	const observer = new IntersectionObserver(entries => {
 
-	entries.forEach(entry => {
+		entries.forEach(entry => {
 
-		if (entry.isIntersecting) {
+			if (entry.isIntersecting) {
 
-			calcStrokeDashoffset();
+				calcStrokeDashoffset();
 
-		}
+			}
+
+		});
 
 	});
 
-});
-
-observer.observe(document.querySelector('.facts__list'));
-
+	observer.observe(circleList);
+}

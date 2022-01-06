@@ -4,19 +4,17 @@
 	background-color: $light-color;
 	padding-bottom: 180px;
 
-		&__decorator-1 {
-			position: absolute;
-			top: 531px;
-			right: -8px;
-		}
+	&__decorator-1 {
+		position: absolute;
+		top: 531px;
+		right: -8px;
+	}
 
-		&__decorator-2 {
-position: absolute;
-bottom: -245px;
-left: -8px;
-		}
-
-
+	&__decorator-2 {
+		position: absolute;
+		bottom: -245px;
+		left: -8px;
+	}
 
 	&__item {
 		display: flex;
@@ -30,12 +28,10 @@ left: -8px;
 		}
 	}
 
-
-
 	&__title {
 		font-size: 32px;
 		line-height: 150%;
-		font-weight: $fw-bolt;
+		font-weight: $fw-bold;
 		color: $ebony-color;
 		margin-bottom: 24px;
 	}
@@ -49,7 +45,7 @@ left: -8px;
 
 	&__link {
 		padding: 0 31px;
-		font-weight: $fw-bolt;
+		font-weight: $fw-bold;
 		font-size: 14px;
 		line-height: 44px;
 		letter-spacing: 0.5px;

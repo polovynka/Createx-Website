@@ -1,6 +1,11 @@
 .partners {
 	padding: 80px 0;
 	background: $athens-color;
+
+	&--pricing {
+		padding: 119px 0;
+	}
+
 	&__title {
 		margin-bottom: 60px;
 	}

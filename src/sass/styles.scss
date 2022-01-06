@@ -17,6 +17,7 @@
 @import "components/recurring-components/learn-more";
 @import "components/recurring-components/breadcrumb";
 @import "components/recurring-components/btn";
+@import "components/recurring-components/accordion";
 
 // ----- home page ------
 
@@ -34,5 +35,14 @@
 @import "components/footer";
 
 // Services page
-@import "components/hero-services";
+@import "components/hero-secondary";
 @import "components/services-content";
+
+// Inner-services page
+@import "components/we-offer";
+@import "components/how-we-do";
+@import "components/services-benefits";
+@import "components/related-projects";
+@import "components/pricing";
+
+
