@@ -29,7 +29,7 @@ const html = () => {
 			collapseWhitespace: true,
 			removeComments: true
 		}))
-		.pipe(gulp.dest('dist'))
+		.pipe(gulp.dest('docst'))
 };
 
 // *Styles
@@ -40,14 +40,14 @@ const styles = () => {
 		.pipe(autoprefixer())
 		.pipe(clean({ level: 2 }))
 		.pipe(concat('styles.min.css'))
-		.pipe(gulp.dest('dist/css'));
+		.pipe(gulp.dest('docst/css'));
 };
 
 // *Fonts
 
 const fontsMoving = () => {
 	return gulp.src(['src/fonts/*.woff', 'src/fonts/*.woff2'])
-		.pipe(gulp.dest('dist/fonts'))
+		.pipe(gulp.dest('docst/fonts'))
 };
 
 // *Scripts
@@ -59,14 +59,14 @@ const scripts = () => {
 		}))
 		.pipe(terser())
 		.pipe(concat('vendor.js'))
-		.pipe(gulp.dest('dist/js/'))
+		.pipe(gulp.dest('docst/js/'))
 	return gulp.src(['src/js/components/*.js', 'src/js/*.js'])
 		.pipe(babel({
 			presets: ["@babel/preset-env"]
 		}))
 		.pipe(terser())
 		.pipe(concat('main.js'))
-		.pipe(gulp.dest('dist/js'))
+		.pipe(gulp.dest('docst/js'))
 };
 
 // *Images
@@ -90,11 +90,11 @@ const images = () => {
 				]
 			})
 		]))
-		.pipe(gulp.dest('dist/images'))
+		.pipe(gulp.dest('docst/images'))
 };
 
 const svgTosprite = () => {
-	return gulp.src('dist/images/svg-for-sprite/**.svg')
+	return gulp.src('docst/images/svg-for-sprite/**.svg')
 		.pipe(svgSprite({
 			mode: {
 				stack: {
@@ -102,7 +102,7 @@ const svgTosprite = () => {
 				}
 			},
 		}))
-		.pipe(gulp.dest('dist/images'));
+		.pipe(gulp.dest('docst/images'));
 }
 
 const imgToWebp = () => {
@@ -115,7 +115,7 @@ const imgToWebp = () => {
 		.pipe(rename((path) => {
 			path.extname = '.webp';
 		}))
-		.pipe(gulp.dest('dist/images'))
+		.pipe(gulp.dest('docst/images'))
 }
 
 // *Browser Sync
@@ -123,7 +123,7 @@ const imgToWebp = () => {
 const sync = () => {
 	browserSync.init({
 		server: {
-			baseDir: "dist"
+			baseDir: "docst"
 		},
 		open: false,
 		notify: false
@@ -137,7 +137,7 @@ const sync = () => {
 // *Clear
 
 const clear = () => {
-	return del('dist')
+	return del('docst')
 };
 
 // *Default export
