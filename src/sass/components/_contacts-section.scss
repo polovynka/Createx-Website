@@ -37,10 +37,15 @@
 		width: 415px;
 		height: 44px;
 		padding: 13px;
-		background:$athens-color;
+		background: $athens-color;
 		border: 1px solid #d7dadd;
 		border-radius: 4px;
 		margin-bottom: 20px;
+
+		&:focus {
+			outline: 2px solid $primary-color;
+			outline-offset: 2px;
+		}
 
 		&::placeholder {
 			color: #9a9ca5;
@@ -52,7 +57,7 @@
 		}
 	}
 
-	&__custom-checkbox{
+	&__custom-checkbox {
 		margin-bottom: 21px;
 	}
 
@@ -66,5 +71,10 @@
 		font-weight: $fw-bold;
 		letter-spacing: 0.5px;
 		text-transform: uppercase;
+
+		&:focus {
+			outline: 2px solid $primary-color;
+			outline-offset: 2px;
+		}
 	}
 }

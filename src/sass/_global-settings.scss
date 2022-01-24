@@ -34,7 +34,8 @@ body {
 
 .container {
     margin: 0 auto;
-    max-width: 1230px;
+    padding: 0 15px;
+    max-width: 1260px;
 }
 
 .visually-hidden {
@@ -90,7 +91,7 @@ body {
     margin: 0;
     margin-bottom: 25px;
     font-weight: $fw-bold;
-    font-size: 46px;
+    font-size: $calc-f-size;
     line-height: 130%;
     color: $ebony-color;
 
@@ -113,4 +114,38 @@ body {
 
 .section-offset {
     padding-top: 120px;
+}
+
+.to-top {
+    display: flex;
+    align-items: flex-end;
+    position: fixed;
+    right: 100px;
+    bottom: 80px;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    cursor: pointer;
+
+    @include laptop {
+        bottom: 40px;
+        right: 30px;
+    }
+
+    &--active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 150%;
+        color: $primary-color;
+        text-transform: uppercase;
+        margin-right: 16px;
+    }
+
+    &__icon {
+    }
 }

@@ -60,7 +60,7 @@ const scripts = () => {
 		.pipe(terser())
 		.pipe(concat('vendor.js'))
 		.pipe(gulp.dest('dist/js/'))
-	return gulp.src(['src/js/*.js', 'src/js/components/*.js'])
+	return gulp.src(['src/js/components/*.js', 'src/js/*.js'])
 		.pipe(babel({
 			presets: ["@babel/preset-env"]
 		}))

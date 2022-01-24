@@ -8,16 +8,36 @@
 
 	&__title {
 		margin-bottom: 60px;
+
+		@include tablet{
+			text-align: center;
+		}
+
 	}
 
 	&__content {
 		max-width: 610px;
+
+		@include laptop {
+			max-width: 480px;
+		}
 	}
 
 	&__image {
 		position: absolute;
 		top: 0;
 		right: 0;
+		width: 495px;
+		height: 550px;
+
+		@include laptop-L {
+			width: calc(495px / 1.5);
+			height: calc(550px / 1.5);
+		}
+
+		@include tablet{
+			display: none;
+		}
 	}
 
 	&__items {
@@ -26,10 +46,11 @@
 	}
 
 	&__slider-nav {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	margin-right: -1px;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		margin-right: 4px;
+		margin-bottom: 4px;
 	}
 }
 
@@ -54,6 +75,10 @@
 		line-height: 160%;
 		color: $grey-color;
 		margin-bottom: 25px;
+
+		@include laptop {
+			font-size: 15px;
+		}
 	}
 
 	&__autor {
@@ -64,6 +89,7 @@
 		color: $ebony-color;
 		padding-right: 110px;
 		margin-bottom: 5px;
+		
 	}
 
 	&__autor-position {

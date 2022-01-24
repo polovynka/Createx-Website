@@ -1,11 +1,12 @@
 // ----- Imports ------
+
 @import "mixins/font-include";
 @import "mixins/mini";
+@import "mixins/breackpoint";
 @import "normalize";
 @import "variables";
 @import "global-settings";
 @import "fonts";
-
 @import "swiper";
 
 // ----- components ------
@@ -18,6 +19,7 @@
 @import "components/recurring-components/breadcrumb";
 @import "components/recurring-components/btn";
 @import "components/recurring-components/accordion";
+@import "components/recurring-components/side-nav";
 
 // ----- home page ------
 
@@ -44,5 +46,3 @@
 @import "components/services-benefits";
 @import "components/related-projects";
 @import "components/pricing";
-
-

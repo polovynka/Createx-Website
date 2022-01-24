@@ -6,8 +6,6 @@
 	line-height: 150%;
 	color: $grey-color;
 
-
-
 	&__caption {
 		margin-bottom: 8px;
 	}
@@ -23,16 +21,21 @@
 		line-height: 21px;
 		padding-left: 15px;
 
+		&:focus {
+			outline: 2px solid $primary-color;
+			outline-offset: 2px;
+		}
+
 
 		&::placeholder {
 			color: #9a9ca5;
 		}
 	}
 
-		&--big {
+	&--big {
 		flex-grow: 1;
 
-		.form-field__input{
+		.form-field__input {
 			width: 100%;
 		}
 	}

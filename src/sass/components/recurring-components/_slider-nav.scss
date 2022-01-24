@@ -1,9 +1,10 @@
 .slider-nav {
 	position: relative;
-	z-index: 50;
+	z-index: 15;
 	display: flex;
 	align-items: center;
 	margin-right: -12px;
+	user-select: none;
 
 	&__btn {
 		border-radius: 100%;
@@ -11,7 +12,7 @@
 		width: 48px;
 		background-color: #fff;
 		color: $grey-color;
-		transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+		transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -26,9 +27,24 @@
 			object-fit: cover;
 		}
 
+		&:focus {
+			outline: 2px solid $primary-color;
+			outline-offset: 2px;
+			z-index: 5;
+		}
+
 		&:hover {
 			color: $light-color;
 			background-color: $primary-color;
 		}
+
+		&:active {
+			color: $light-color;
+			background-color: $active-color;
+		}
 	}
+}
+.slider-nav__btn.swiper-button-disabled {
+	opacity: 0.4;
+	pointer-events: none;
 }

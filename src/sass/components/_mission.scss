@@ -1,4 +1,3 @@
-$mission-gap: 94px;
 .mission {
 	padding-top: 120px;
 	background-color: $light-color;
@@ -6,8 +5,12 @@ $mission-gap: 94px;
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: calc($mission-gap * 2);
+		gap: calc(var(--mission-gap) * 2);
 		margin-bottom: 26px;
+
+		@include laptop {
+			--mission-gap: 30px;
+		}
 	}
 
 	&__list-item {
@@ -22,7 +25,7 @@ $mission-gap: 94px;
 			&::after {
 				content: "";
 				position: absolute;
-				right: calc($mission-gap * -1);
+				right: calc(var(--mission-gap) * -1);
 				top: 0;
 				width: 1px;
 				height: 100%;
@@ -84,6 +87,7 @@ $mission-gap: 94px;
 
 	&__field {
 		margin-right: 24px;
+		
 	}
 
 	&__btn {

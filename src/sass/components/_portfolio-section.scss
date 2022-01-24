@@ -13,6 +13,8 @@
 		margin: 0;
 		max-width: 710px;
 		padding-bottom: 10px;
+
+	
 	}
 
 	&__items {
@@ -40,6 +42,14 @@
 	border-radius: 4px;
 	background-color: $light-color;
 	overflow: hidden;
+	transition: transform 0.3s ease-in-out;
+
+	&:hover {
+
+		.portfolio-item__btn{
+			margin-bottom: 0;
+		}
+	}
 
 	&__content {
 		padding: 16px 10px;
@@ -63,7 +73,7 @@
 	}
 
 	&__btn {
-		display: none;
+		display: block;
 		margin-top: 24px;
 		font-size: 14px;
 		font-weight: $fw-bold;
@@ -73,5 +83,8 @@
 		color: $primary-color;
 		border: 1px solid currentColor;
 		border-radius: 4px;
+		transition:margin-bottom .3s ease-in-out ;
+		will-change: margin;
+		margin-bottom: -68px;
 	}
 }

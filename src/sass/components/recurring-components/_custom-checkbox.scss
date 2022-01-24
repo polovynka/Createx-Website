@@ -45,8 +45,12 @@
 		background-color: $primary-color;
 	}
 
+	&__input:focus + .custom-checkbox__text {
+		outline: 2px solid $primary-color;
+		outline-offset: 2px;
+	}
+
 	&__input:checked + &__text::after {
 		opacity: 1;
 	}
-
 }

@@ -19,6 +19,14 @@
 		z-index: 3;
 		background: #1e212c;
 		opacity: 0.6;
+		transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+	}
+
+	&--played {
+		&::before {
+			opacity: 0;
+			visibility: hidden;
+		}
 	}
 
 	&__content {
@@ -40,16 +48,45 @@
 		height: 80px;
 		transform: translate(-50%, -50%);
 		z-index: 10;
+		transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+		animation: pulse .5s;
+
+		&:focus {
+			outline: 2px solid $primary-color;
+			outline-offset: 2px;
+		}
+
+		&:hover {
+			background-color: $active-color;
+		}
+
+		&:active {
+			animation: none;
+			background-color: $active-color;
+			
+		}
+
+		&--played {
+			opacity: 0;
+			visibility: hidden;
+		}
 
 		svg {
 			height: 26px;
 			width: 26px;
 		}
+
+		@keyframes pulse {
+			from{
+				box-shadow:  0 0 0 0 #FFEBE6;
+			}
+			to{
+				box-shadow:  0 0 0 20px #FFEBE6;
+			}
+		}
 	}
 
 	&__muted {
-		@include flex-center;
-
 		position: absolute;
 		left: 32px;
 		bottom: 32px;
@@ -58,10 +95,40 @@
 		width: 40px;
 		height: 40px;
 		z-index: 10;
+		transition: background-color 0.3s ease-in-out;
+
+		&:focus {
+			outline: 2px solid $primary-color;
+			outline-offset: 2px;
+		}
+
+		&:hover {
+			background-color: rgba(#fff, 0.4);
+		}
+
+		&:active {
+			background-color: rgba(#fff, 0.4);
+		}
 
 		svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 			height: 13px;
 			width: 13px;
+			fill: #fff;
+		}
+
+		&::before{
+			position: absolute;
+			content: '';
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 10;
+			border-radius: 100%;
 		}
 	}
 }

@@ -1,9 +1,10 @@
 const portSlider = document.querySelector(".portfolio-section__items");
-const testimon = document.querySelector(".testimonials__items");
+const testimonialsSlider = document.querySelector(".testimonials__items");
 const relatedSlider = document.querySelector(".related-projects__items");
+const heroSlider = document.querySelector(".hero-slider");
 
 if (portSlider) {
-  const portfolioSlider = new Swiper(portSlider, {
+  const portfolio = new Swiper(portSlider, {
     slidesPerView: 3,
     spaceBetween: 30,
     watchSlidesProgress: true,
@@ -16,8 +17,8 @@ if (portSlider) {
   });
 }
 
-if (testimon) {
-  const tesimonials = new Swiper(testimon, {
+if (testimonialsSlider) {
+  const tesimonials = new Swiper(testimonialsSlider, {
     slidesPerView: 1,
     watchSlidesProgress: true,
 
@@ -30,7 +31,7 @@ if (testimon) {
 }
 
 if (relatedSlider) {
-  const relatedProjSlider = new Swiper(relatedSlider, {
+  const related = new Swiper(relatedSlider, {
     slidesPerView: 3,
     spaceBetween: 30,
     watchSlidesProgress: true,
@@ -40,5 +41,39 @@ if (relatedSlider) {
       nextEl: ".related-projects__next",
       prevEl: ".related-projects__prev",
     },
+  });
+}
+
+if (heroSlider) {
+
+  const bodyStyles = window.getComputedStyle(document.body);
+  const heroSliderSpeed = bodyStyles.getPropertyValue('--hero-slider-speed'); //get
+
+  document.body.style.setProperty('--hero-slider-speed', heroSliderSpeed + 'ms');
+
+  const hero = new Swiper(heroSlider, {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".hero__next",
+      prevEl: ".hero__prev",
+    },
+
+    pagination: {
+      el: '.hero__pag',
+      type: 'bullets',
+      clickable: true,
+    },
+
+    speed: heroSliderSpeed + 'ms',
+
+    on: {
+      init: function () {
+        const paginationBullets = document.querySelectorAll('.hero__pag .swiper-pagination-bullet');
+        paginationBullets.forEach(el => {
+          el.innerHTML = '<span class="hero__bar"></span>'
+        })
+      }
+    }
+
   });
 }

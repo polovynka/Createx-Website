@@ -11,20 +11,46 @@
 	letter-spacing: 0.5px;
 	color: $light-color;
 	border-radius: 4px;
+	transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+	&:focus {
+		outline: 2px solid $primary-color;
+		outline-offset: 2px;
+	}
 
 	&--stroke {
 		&-light {
 			color: $light-color;
 			border-color: $light-color;
+
+			&:hover {
+				border-color: $active-color;
+			}
 		}
 
 		&-primary {
 			border-color: $primary-color;
 			color: $primary-color;
 		}
+
+		&:hover {
+			background-color: $active-color;
+		}
+
+		&:active {
+			background-color: $active-color;
+		}
 	}
 
 	&--fill {
 		background-color: $primary-color;
+
+		&:hover {
+			background-color: $active-color;
+		}
+
+		&:active {
+			background-color: $active-color;
+		}
 	}
 }
