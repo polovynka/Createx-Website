@@ -11,13 +11,26 @@
 	}
 
 	&__list {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		display: grid;
+		column-gap: 102px;
+		grid-template-columns: repeat(6, 1fr);
+		row-gap: 40px;
+
+		@include tablet {
+			column-gap: 30px;
+		}
 	}
 
-	&__link{
-		&:focus{
+	&__item {
+		@include tablet {
+			display: flex;
+			justify-content: center;
+			grid-column: 3 span;
+		}
+	}
+
+	&__link {
+		&:focus {
 			outline: 2px solid $primary-color;
 			outline-offset: 2px;
 		}

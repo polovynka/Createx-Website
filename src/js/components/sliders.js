@@ -5,15 +5,25 @@ const heroSlider = document.querySelector(".hero-slider");
 
 if (portSlider) {
   const portfolio = new Swiper(portSlider, {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 30,
     watchSlidesProgress: true,
 
     loop: true,
+
     navigation: {
       nextEl: ".portfolio-section__next",
       prevEl: ".portfolio-section__prev",
     },
+
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      }
+    }
   });
 }
 
@@ -53,6 +63,9 @@ if (heroSlider) {
 
   const hero = new Swiper(heroSlider, {
     slidesPerView: 1,
+    autoplay: {
+      delay: 2000,
+    },
     navigation: {
       nextEl: ".hero__next",
       prevEl: ".hero__prev",

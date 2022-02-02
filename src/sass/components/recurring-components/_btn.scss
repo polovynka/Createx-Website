@@ -4,7 +4,7 @@
 	border-width: 1px;
 	border-color: transparent;
 	padding: 15px 39px;
-	font-size: 16px;
+	font-size: clamp(10px,4vw,16px);
 	font-weight: $fw-bold;
 	line-height: 20px;
 	text-transform: uppercase;
@@ -20,6 +20,7 @@
 
 	&--stroke {
 		&-light {
+			background-color: transparent;
 			color: $light-color;
 			border-color: $light-color;
 

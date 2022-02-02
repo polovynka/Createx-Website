@@ -1,5 +1,4 @@
 // ----- Font-sizes-----
-$calc-f-size: clamp(16px, 5vw, 46px);
 $fw-reg: 400;
 $fw-bold: 700;
 $fw-black: 900;
@@ -21,4 +20,5 @@ $grid-gap: 30px;
 :root {
 	--hero-slider-speed: 1000;
 	--mission-gap: 94px;
+	--grid-gap: 30px;
 }

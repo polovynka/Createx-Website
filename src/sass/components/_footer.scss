@@ -3,14 +3,36 @@
 	background: $ebony-color;
 	color: rgba($color: #ffffff, $alpha: 0.6);
 
+	@include tablet {
+		padding: 40px 0;
+	}
 	&__container {
 		display: grid;
 		grid-template-columns: 2fr 1fr 2fr;
 		grid-template-rows: auto;
+		gap: 10px;
 		grid-template-areas:
 			"about-Us . form"
 			"address nav-1 nav-2"
 			"copyright . .";
+
+		@include tablet {
+			column-gap: 10px;
+			grid-template-areas:
+				"about-Us about-Us about-Us"
+				"form form form"
+				"address nav-1 nav-2"
+				"copyright copyright .";
+		}
+
+		@include mobile {
+			grid-template-areas:
+				"about-Us about-Us ."
+				"form form form"
+				"address . ."
+				"nav-1 nav-2 ."
+				"copyright copyright copyright";
+		}
 	}
 
 	&__copyright {
@@ -33,9 +55,18 @@
 .footer-about-us {
 	grid-area: about-Us;
 
+	@include mobile {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
 	&__header {
 		display: flex;
 		margin-bottom: 24px;
+
+		@include mobile {
+			display: block;
+		}
 
 		.logo {
 			&:focus {
@@ -54,6 +85,11 @@
 .social {
 	display: flex;
 	margin-left: 60px;
+
+	@include mobile {
+		margin-top: 20px;
+		margin-left: 0;
+	}
 
 	&__item {
 		&:not(:last-child) {
@@ -93,6 +129,10 @@
 	grid-area: form;
 	margin-bottom: 50px;
 
+	@include mobile {
+		margin-bottom: 20px;
+	}
+	
 	&__title {
 		font-weight: $fw-bold;
 		font-size: 24px;
@@ -130,12 +170,12 @@
 	}
 
 	&__btn {
-		width: clamp(50px, 15vw, 131px);
+		width: clamp(100px, 15vw, 131px);
 		height: 44px;
 		position: absolute;
 		top: 0;
 		right: 0;
-		font-size: clamp(12px, 1.5vw, 16px);
+		font-size: clamp(12px, 2vw, 14px);
 		padding: 0 20px;
 		background: #ff5a30;
 		border-radius: 0px 4px 4px 0px;
@@ -151,6 +191,10 @@
 	grid-area: address;
 	font-style: normal;
 	margin-bottom: 54px;
+
+	@include mobile {
+		margin-bottom: 20px;
+	}
 
 	&__title {
 		font-size: 16px;

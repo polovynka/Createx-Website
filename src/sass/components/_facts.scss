@@ -3,6 +3,10 @@
 	position: relative;
 	overflow: hidden;
 
+	@include mobile {
+		padding-top: 50px;
+	}
+
 	&::before {
 		content: "";
 		position: absolute;
@@ -16,10 +20,29 @@
 	}
 
 	&__list {
-		display: flex;
-		justify-content: center;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
 		gap: 48px;
 		margin-top: 58px;
+
+		@include tablet {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include mobile {
+			display: block;
+		}
+	}
+
+	&__item {
+		display: flex;
+		justify-content: center;
+
+		@include mobile{
+		&:not(:last-child){
+			margin-bottom: 30px;
+		}
+	}
 	}
 }
 

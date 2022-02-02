@@ -1,6 +1,20 @@
 .hero {
-	&__btns .btn:not(:last-child) {
-		margin-right: 21px;
+	&__btns {
+		.btn {
+
+
+			&:not(:last-child) {
+				margin-right: 21px;
+
+				@include mobile{
+				margin-right: 0;
+			}
+			}
+
+			@include mobile{
+				margin-bottom: 20px;
+			}
+		}
 	}
 
 	&__content {
@@ -15,7 +29,7 @@
 		background-color: $light-color;
 		z-index: 5;
 
-		@include laptop-L{
+		@include laptop-L {
 			display: none;
 		}
 	}
@@ -27,21 +41,25 @@
 		transform: translateY(-50%);
 		z-index: 5;
 
-		@include laptop-L{
+		@include laptop-L {
 			display: none;
 		}
 	}
 
 	&__pag {
 		position: absolute;
-		left: calc((100% - 1230px)/2);
+		left: calc((100% - 1230px) / 2);
 		bottom: 120px;
 		display: flex;
 		counter-reset: pag;
 		z-index: 5;
 
-		@include laptop-L{
+		@include laptop-L {
 			left: 15px;
+		}
+
+		@include tablet {
+			bottom: 50px;
 		}
 
 		.swiper-pagination-bullet {
@@ -58,7 +76,7 @@
 				counter-increment: pag;
 				content: "0" counter(pag);
 				font-weight: $fw-bold;
-				font-size: 28px;
+				font-size: clamp(10px, 5vw, 28px);;
 				line-height: 150%;
 				color: rgba($light-color, 0.3);
 				transition: color 0.3s ease-in-out;
@@ -88,6 +106,10 @@
 		overflow: hidden;
 		border-radius: 100px;
 
+		@include tablet {
+			width: 20vw;
+		}
+
 		&::after {
 			content: "";
 			position: absolute;
@@ -115,5 +137,15 @@
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
+
+		@include tablet {
+			padding-top: 130px;
+			padding-bottom: 200px;
+		}
+
+		@include mobile {
+			padding-top: 70px;
+			padding-bottom: 100px;
+		}
 	}
 }

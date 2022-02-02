@@ -1,6 +1,10 @@
 .testimonials {
-	padding: 100px;
+	padding: 100px 0;
 	background: $athens-color;
+
+	@include mobile{
+		padding: 0;
+	}
 
 	&__container {
 		position: relative;

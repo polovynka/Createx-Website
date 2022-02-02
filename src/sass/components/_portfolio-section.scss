@@ -2,6 +2,9 @@
 	background-color: $light-color;
 	padding: 120px 0;
 
+	@include mobile {
+		padding: 40px 0;
+	}
 	&__top {
 		margin-bottom: 50px;
 		display: flex;
@@ -13,8 +16,6 @@
 		margin: 0;
 		max-width: 710px;
 		padding-bottom: 10px;
-
-	
 	}
 
 	&__items {
@@ -32,6 +33,10 @@
 		margin-top: 82px;
 		position: relative;
 		z-index: 15;
+
+		@include mobile {
+			margin-top: 40px;
+		}
 	}
 }
 .portfolio-item {
@@ -45,8 +50,7 @@
 	transition: transform 0.3s ease-in-out;
 
 	&:hover {
-
-		.portfolio-item__btn{
+		.portfolio-item__btn {
 			margin-bottom: 0;
 		}
 	}
@@ -83,8 +87,12 @@
 		color: $primary-color;
 		border: 1px solid currentColor;
 		border-radius: 4px;
-		transition:margin-bottom .3s ease-in-out ;
+		transition: margin-bottom 0.3s ease-in-out;
 		will-change: margin;
 		margin-bottom: -68px;
+
+		@include tablet {
+			margin-bottom: 0;
+		}
 	}
 }
