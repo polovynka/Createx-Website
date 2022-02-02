@@ -10,8 +10,8 @@
 	height: 500px;
 
 	@include mobile {
-        height: 300px;
-    }
+		height: 300px;
+	}
 
 	&::before {
 		content: "";
@@ -53,7 +53,7 @@
 		transform: translate(-50%, -50%);
 		z-index: 10;
 		transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-		animation: pulse .5s;
+		animation: pulse 0.5s;
 
 		&:focus {
 			outline: 2px solid $primary-color;
@@ -67,7 +67,6 @@
 		&:active {
 			animation: none;
 			background-color: $active-color;
-			
 		}
 
 		&--played {
@@ -81,11 +80,11 @@
 		}
 
 		@keyframes pulse {
-			from{
-				box-shadow:  0 0 0 0 #FFEBE6;
+			from {
+				box-shadow: 0 0 0 0 #ffebe6;
 			}
-			to{
-				box-shadow:  0 0 0 20px #FFEBE6;
+			to {
+				box-shadow: 0 0 0 20px #ffebe6;
 			}
 		}
 	}
@@ -100,6 +99,10 @@
 		height: 40px;
 		z-index: 10;
 		transition: background-color 0.3s ease-in-out;
+
+		@include laptop {
+			display: none;
+		}
 
 		&:focus {
 			outline: 2px solid $primary-color;
@@ -124,9 +127,9 @@
 			fill: #fff;
 		}
 
-		&::before{
+		&::before {
 			position: absolute;
-			content: '';
+			content: "";
 			top: 0;
 			bottom: 0;
 			left: 0;
