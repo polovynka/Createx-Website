@@ -11,21 +11,20 @@
 	}
 
 	&__list {
-		display: grid;
-		column-gap: 102px;
-		grid-template-columns: repeat(6, 1fr);
-		row-gap: 40px;
-
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		
 		@include tablet {
-			column-gap: 30px;
+			gap: 5%;
+			flex-wrap: wrap;
+			justify-content: center;
 		}
 	}
 
 	&__item {
 		@include tablet {
-			display: flex;
-			justify-content: center;
-			grid-column: 3 span;
+			flex-basis: 25%;
 		}
 	}
 
